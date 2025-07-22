@@ -1,9 +1,6 @@
 import CoreConcept from "./components/CoreConcept";
 import Header from "./components/Header";
-import ComponentImg from "./assets/components.png";
-import UiImg from "./assets/jsx-ui.png";
-import ConfigImg from "./assets/config.png";
-import StateImg from "./assets/state-mgmt.png";
+import { CORE_CONCEPTS } from "./data.js";
 
 function App() {
   return (
@@ -14,25 +11,13 @@ function App() {
           <h2>Core Concepts</h2>
           <ul>
             <CoreConcept
-              title="Components"
-              description="The core UI Building Block."
-              img={ComponentImg}
+              title={CORE_CONCEPTS[0].title}
+              description={CORE_CONCEPTS[0].description}
+              image={CORE_CONCEPTS[0].image}
             />
-            <CoreConcept
-              title="Config"
-              description="The core UI Building Block."
-              img={ConfigImg}
-            />
-            <CoreConcept
-              title="JSX UI"
-              description="The core UI Building Block."
-              img={UiImg}
-            />
-            <CoreConcept
-              title="State Management"
-              description="The core UI Building Block."
-              img={StateImg}
-            />
+            <CoreConcept {...CORE_CONCEPTS[1]} />
+            <CoreConcept {...CORE_CONCEPTS[2]} />
+            <CoreConcept {...CORE_CONCEPTS[3]} />
           </ul>
         </section>
       </main>
